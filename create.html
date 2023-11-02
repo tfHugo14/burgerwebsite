@@ -11,52 +11,53 @@
         <img src="./img/burger-svgrepo-com.svg" alt="burger" width="100x" height="100px">
         <hr>
         <h2>Creat a Burger!</h2>
+
         <section>
             <form action="nothing.php" method="post">
                 <fieldset>
                     <label for="">What type of proteine would you like?</label>
-                    <input type="text">
+                    <input type="text" name="proteine">
                     <hr>
 
-                    <label for="">How many patties would you like?</label>
-                    <input type="number" min="1" max="10">
+                    <label for="patties">How many patties would you like?</label>
+                    <input type="number" min="1" max="10" value="0" name="patties">
                     <hr>
 
-                    <label for="">How do you want you pattie cooked?</label>
+                    <label for="cooked">How do you want you pattie cooked?</label>
                     <br>
-                    <label for="">Rare</label>
-                    <input type="range" min="1" max="5" value="3">
-                    <label for="">Well-Done</label>
+                    <label for="cooked">Rare</label>
+                    <input type="range" min="1" max="5" value="3" name="cooked">
+                    <label for="cooked">Well-Done</label>
                     <hr>
 
-                    <label for="">What topping would you like?</label>
+                    <label for="topping">What topping would you like?</label>
                     <br>
-                    <input type="checkbox" value="lettuce">
-                    <label for="">Lettuce</label>
-                    <input type="checkbox" value="tomato">
-                    <label for="">Tomato</label>
-                    <input type="checkbox" value="onion">
-                    <label for="">Onion</label>
+                    <input type="checkbox" value="lettuce" name="topping">
+                    <label for="checkbox">Lettuce</label>
+                    <input type="checkbox" value="tomato" name="topping">
+                    <label for="checkbox">Tomato</label>
+                    <input type="checkbox" value="onion" name="topping">
+                    <label for="checkbox">Onion</label>
                     <hr>
 
                     <label for="">Would you like to add any cheese?</label>
                     <br>
-                    <input type="radio" name="yesno" id="yesno">
-                    <label for="">Yes</label>
-                    <input type="radio" name="yesno" id="yesno">
-                    <label for="">No</label>
+                    <input type="radio" value="yes" name="cheese">
+                    <label for="cheese">Yes</label>
+                    <input type="radio" value="no" name="cheese">
+                    <label for="yesno">No</label>
                     <hr>
 
-                    <label for="">What type of bun would you like?</label>
-                    <select name="" id="">
-                        <option value="">Sesame</option>
-                        <option value="">Potato</option>
-                        <option value="">Pretzel</option>
+                    <label for="bread">What type of bun would you like?</label>
+                    <select name="bread">
+                        <option value="Sesame">Sesame</option>
+                        <option value="Potato">Potato</option>
+                        <option value="Pretzel">Pretzel</option>
                     </select>
                     <hr>
 
-                    <label for="">What type of sauce would you like?</label>
-                    <input list="sauces">
+                    <label for="sauces">What type of sauce would you like?</label>
+                    <input type="text" list="sauces" name="sauces">
                     <datalist id="sauces">
                         <option value="Ketchup">
                         <option value="Mayo">
@@ -67,8 +68,11 @@
                     <label for="">Anything else you want to add?</label>
                     <br>
                     <textarea id="text" name="comment" cols="60" rows="5"></textarea>
+                    <br>
+                    <input type="submit" value="Submmit">
                 </fieldset>
             </form>
         </section>
+
     </body>
 </html>
